@@ -139,7 +139,7 @@ class GcodeProcessor:
 
         return new_str + end_string
 
-    def clean_and_concatenate(self):
+    def run(self):
         gcodes = []
         for i in range(len(self.CONFIGS)):
             config = self.CONFIGS[i]

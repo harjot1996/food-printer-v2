@@ -83,7 +83,7 @@ class GcodeGenerator:
         cmd += self.INPUT_DIR + '/' + str(meta[0])  # input stl file
         subprocess.call(self.SLIC3R_PATH + cmd, shell=True)
 
-    def generate_gcode(self):
+    def run(self):
         stl_files = [f for f in listdir(self.INPUT_DIR) if isfile(join(self.INPUT_DIR, f)) and f[-4:].upper() == ".STL"]
 
         def numeric_key(x):

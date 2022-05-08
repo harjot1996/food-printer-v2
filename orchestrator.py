@@ -44,8 +44,8 @@ class Orchestrator:
 
     def run(self):
         step_1 = GcodeGenerator(self.CONFIGS, self.OFFSET)
-        step_1.generate_gcode()
+        step_1.run()
         step_2 = GcodeDepthFixer(self.CONFIGS)
-        self.CONFIGS = step_2.fix_depths()
+        self.CONFIGS = step_2.run()
         step_3 = GcodeProcessor(self.CONFIGS)
-        step_3.clean_and_concatenate()
+        step_3.run()

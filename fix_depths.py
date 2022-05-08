@@ -43,7 +43,7 @@ class GcodeDepthFixer:
 	def write_config(self, configs, i):
 		self.CONFIGS[i][3] = configs[i][3]
 
-	def fix_depths(self):
+	def run(self):
 		configs = self.CONFIGS
 		depth_map = {}
 		for i in range(0, len(configs)):
